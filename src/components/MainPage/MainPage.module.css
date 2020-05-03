@@ -1,0 +1,10 @@
+.error {
+    display: flex;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    width: auto;
+    color: white;
+    margin-bottom: 30px;
+}

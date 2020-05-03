@@ -1,0 +1,17 @@
+.city {
+    font-family: 'Rubik', sans-serif;
+    color: lightskyblue;
+    padding-right: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+}

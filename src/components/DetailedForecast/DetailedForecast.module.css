@@ -1,0 +1,48 @@
+.mainWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 20px 0;
+}
+
+.itemWrapper {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.75);
+}
+
+.temp {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+
+.humidity {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 45px;
+}
+
+.time {
+    padding-top: 20px;
+    color: #1589b7;
+    font-size: 20px;
+}
+
+.returnButton {
+    margin-left: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+    text-decoration: none;
+    font-size: 28px;
+}

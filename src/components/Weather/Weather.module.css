@@ -1,0 +1,50 @@
+.mainWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+.link {
+    font-family: 'Rubik', sans-serif;
+    color: #1589b7;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+
+.temperatures {
+    display: flex;
+    justify-content: space-between;
+    width: 11%;
+}
+
+.title {
+    font-size: 45px;
+}
+
+.temp {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.minMax {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.weather {
+    font-size: 28px;
+    font-weight: bold;
+    width: auto;
+    margin-bottom: 30px;
+}
