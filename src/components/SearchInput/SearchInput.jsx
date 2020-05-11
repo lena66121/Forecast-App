@@ -1,45 +1,12 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
 import { useDispatch } from 'react-redux';
 import { getForecastForDay } from '../../services/api';
 import styles from './SearchInput.module.css';
 import { addCityToHistory } from '../../redux/actions';
 import WeatherHistory from '../WeatherHistory/WeatherHistory';
-
-const useStyles = makeStyles(() => ({
-  main: {
-    '&$focusedLabel': {
-      color: 'white',
-      backgroundColor: 'transparent',
-    },
-  },
-  focusedLabel: {},
-  underline: {
-    '&$focusedInput': {
-      color: 'white',
-      backgroundColor: 'transparent',
-    },
-    '&:focus': {
-      color: 'transparent',
-    },
-    backgroundColor: 'transparent',
-    paddingLeft: 10,
-    borderBottom: `2px solid white`,
-    color: 'white',
-    fontSize: 20,
-    '&:after': {
-      backgroundColor: 'transparent',
-      borderBottom: `2px solid white`,
-    },
-  },
-  button: {
-    width: '20%',
-    height: 40,
-    fontWeight: 'bold',
-  },
-}));
+import useStyles from '../../material-ui/styles';
 
 const SearchInput = () => {
   const classes = useStyles();

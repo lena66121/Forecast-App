@@ -6,11 +6,11 @@ import { getForecastForFiveDays } from '../../services/api';
 
 const Weather = () => {
   const dispatch = useDispatch();
-  const city1 = useSelector(state => state.weather.name);
+  const city = useSelector(state => state.weather.name);
   const data = useSelector(state => state.weather);
 
   const handleClick = () => {
-    dispatch(getForecastForFiveDays(city1));
+    dispatch(getForecastForFiveDays(city));
   };
 
   return (
@@ -35,7 +35,7 @@ const Weather = () => {
             </p>
           </div>
           <p className={styles.weather}>{data.weather[0].main}</p>
-          <Link to="/details" onClick={handleClick} className={styles.link}>
+          <Link to={data.name} onClick={handleClick} className={styles.link}>
             More details
           </Link>
         </>

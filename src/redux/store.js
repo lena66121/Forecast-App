@@ -1,6 +1,4 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { configureStore } from '@reduxjs/toolkit';
 import {
   currentCity,
   weatherHistory,
@@ -8,16 +6,13 @@ import {
   error,
 } from './reducers';
 
-const rootReducer = combineReducers({
-  weather: currentCity,
-  forecast: forecastForFiveDays,
-  weatherHistory,
-  error,
+const store = configureStore({
+  reducer: {
+    weather: currentCity,
+    forecast: forecastForFiveDays,
+    weatherHistory,
+    error,
+  },
 });
-
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-);
 
 export default store;

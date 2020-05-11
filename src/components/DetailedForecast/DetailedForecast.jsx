@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useParams, Link } from 'react-router-dom';
 import moment from 'moment';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import styles from './DetailedForecast.module.css';
 
-const DetailedForecast = () => {
-  const forecast = useSelector(state => state.forecast);
+import styles from './DetailedForecast.module.css';
+import { getForecastForFiveDays } from '../../services/api';
+
+const DetailedForecast = ({ forecast }) => {
+  const dispatch = useDispatch();
+  const { city } = useParams();
+
+  useEffect(() => {
+    if (forecast.length === 0) {
+      dispatch(getForecastForFiveDays(city));
+    }
+  }, []);
 
   return (
     <>
